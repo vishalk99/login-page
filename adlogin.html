@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>online notice board | admin login</title></head>
+<style>
+body
+{
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+.inp1
+{
+	transform:translate(-50%,-50%);
+	left:50%;
+	top:30%;
+	position:relative;
+	padding:15px;
+	font-size:18px;
+	width:250px;
+	height:50px;
+}
+.inp2
+{
+	transform:translate(-50%,-50%);
+	left:50%;
+	top:35%;
+	position:relative;
+	padding:15px;
+	width:250px;
+	font-size:18px;
+	height:50px;
+}
+.main
+{
+	transform:translate(-50%,-50%);
+	left:50%;
+	top:50%;
+	position:absolute;
+	background:rgba(0,0,0,0.6);
+	width:300px;
+	height:400px;
+	box-shadow:4px 0 6px rgba(0,0,0,1);
+}
+.but
+{
+	transform:translate(-50%,-50%);
+	left:50%;
+	top:45%;
+	position:relative;
+	width:120px;
+	height:30px;
+	font-size:16px;
+	color:white;
+	background:rgba(0,0,255,0.7);
+	border:none;
+	transition:0.5s;
+}
+.but:hover
+{
+	width:160px;
+	transition:0.5s;
+	background:rgba(0,22,25,1);
+	outline:none;
+}
+.fo1{
+	transform:translate(-50%,-50%);
+	left:10%;
+	top:22%;
+	position:relative;
+	color:white;
+	font-size:20px;
+	font-family:calibri;
+}
+.fo2
+{
+	transform:translate(-50%,-50%);
+	left:10%;
+	top:27%;
+	position:relative;
+	color:white;
+	font-size:20px;
+	font-family:calibri;
+}
+.forgot
+{
+
+	transform:translate(-50%,-50%);
+	left:28%;
+	top:71%;
+	position:absolute;
+	color:white;
+	text-decoration:none;
+	text-transform:capitalize;
+	font-family:arial;
+	font-size:14px;
+}
+.forgot:hover
+{
+	border-bottom:1px solid #fff;
+}
+</style>
+<body background="https://data.whicdn.com/images/138576606/original.jpg">
+	<form class="main" action="adlog" method="post">
+	{% csrf_token %}
+	<font class="fo1">Username</font>
+	<input type="text" placeholder="Username" class="inp1" name="adname">
+	<font class="fo2">Password</font>
+	<input type="password" placeholder="Password" class="inp2" name="password">
+	<a href="#" class="forgot">forgot password</a>
+	<input type="submit" value="Login" class="but">
+	</form>
+</body>
+</html>
